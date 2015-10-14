@@ -1,6 +1,21 @@
 # Google news analyzer
 
-Google news feed analyzer micro service.
+Very fast multi-threading Google news feed analyzer micro service.
+
+It accepts the request in JSON format
+
+    {
+        news: [
+            {query: <query1>, number: <number1>},
+            {query: <query2>, number: <number2>}
+            ...
+        ]
+    }
+
+Where *query* is the query to search and *number* is then number of result pages to walk through.
+
+Returns encountered domain names and their matches counter. (See example below)
+
 Written in Scala, using Akka Http and Akka Streams.
 
 ## Usage
