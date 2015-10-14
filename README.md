@@ -1,20 +1,21 @@
 # Google news analyzer
 
-Веб-сервис для анализа новостной ленты Google.
+Google news feed analyzer micro service.
+Written in Scala, using Akka Http and Akka Streams.
 
 ## Usage
 
-Запуск сервера с помощью sbt:
+Start server with sbt:
 
     $ sbt
     > ~re-start
 
-После запуска сервиса отправляем ему HTTP POST запросы:
+and make POST request to it:
 
 
     $ curl -X POST -H 'Content-Type: application/json' http://localhost:9000/analyzenews -d '{"news": [{"query": "scala akka", "number": 20}, {"query": "scala best practices", "number": 10}]}'
     {
-      "date": "18 Апрель 2015 г. 18:55:02 MSK",
+      "date": "10 October 2015 18:55:02",
       "result": {
         "adtmag.com": 1,
         "readwrite.com": 3,
